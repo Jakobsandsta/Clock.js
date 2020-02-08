@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            body {
+                background-image: url("https://images.photowall.com/products/51424/norwegian-morning.jpg?h=380&q=75");
+                background-size: 100%;
+            }
+
+            div {
+                background-color: white;
+                border-radius: 10%;
+                border-style: 5px;
+                border-color: yellow;
+                padding: 10px;
+                padding-bottom: 15px;
+                margin: 100px;
+            }
+
+            p {
+                margin-left: 10px;
+                margin-right: 10px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 90%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="width: 120px; height: 100px;">
+            <p id="Hour">00</p> 
+            <p id="Minute">00</p>
+            <p id="Second">00</p>
+        </div>
+
+        <script>
+            function Today() {
+
+                const time = new Date();
+
+                // Gets the hour of the day
+                const Hour = time.getHours();
+                console.log(Hour)
+                document.getElementById("Hour").textContent = "Hour: " + Hour;
+
+                // Gets the minute of the day
+                const Minute = time.getMinutes();
+                console.log(Minute)
+                document.getElementById("Minute").textContent = "Minutes: " + Minute;
+
+                // Gets the second of the day
+                const Second = time.getSeconds();
+                console.log(Second)
+                document.getElementById("Second").textContent = "Seconds: " + Second;
+
+            }
+            setInterval(Today, 1000);
+
+            
+
+
+        </script>
+    </body>
+</html>
